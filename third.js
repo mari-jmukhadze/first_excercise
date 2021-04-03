@@ -3,8 +3,13 @@
 var array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 function shuffle(arr){
-    return arr = arr.sort(() => Math.random() - 0.5) //math.random() - 0.5 is positive or negative so orders randomly
+    for (var i = arr.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var t = arr[i];
+        arr[i] = arr[j];
+        arr[j] = t;
+    }
+    return arr;
 }
 
-
-console.log(shuffle(array))
+console.log(shuffle(array));
