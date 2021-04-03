@@ -25,6 +25,13 @@ triangle.prototype.perimeter = function() {
 }
 
 
+
+
 var trngl = new triangle(1, 2, 3);
 console.log(trngl.perimeter());
 console.log(trngl.getType())
+
+var key = Object.values(trngl);
+for (var k of key){
+    console.log(k)
+}
